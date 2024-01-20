@@ -2,16 +2,9 @@
 
 declare(strict_types=1);
 
-/**
- * This file is part of the guanguans/dcat-login-captcha.
- *
- * (c) guanguans <ityaozm@gmail.com>
- *
- * This source file is subject to the MIT license that is bundled.
- */
 
-use Guanguans\DcatLoginCaptcha\Facades\CaptchaBuilder;
-use Guanguans\DcatLoginCaptcha\LoginCaptchaServiceProvider;
+use Bilwy\DcatLoginCaptcha\Facades\CaptchaBuilder;
+use Bilwy\DcatLoginCaptcha\LoginCaptchaServiceProvider;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
 
@@ -21,7 +14,7 @@ if (! function_exists('login_captcha_check')) {
      */
     function login_captcha_check(string $value): bool
     {
-        return Guanguans\DcatLoginCaptcha\PhraseBuilder::comparePhrases(
+        return Bilwy\DcatLoginCaptcha\PhraseBuilder::comparePhrases(
             Session::pull(LoginCaptchaServiceProvider::setting('captcha_phrase_session_key')),
             $value
         );

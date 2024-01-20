@@ -2,18 +2,11 @@
 
 declare(strict_types=1);
 
-/**
- * This file is part of the guanguans/dcat-login-captcha.
- *
- * (c) guanguans <ityaozm@gmail.com>
- *
- * This source file is subject to the MIT license that is bundled.
- */
 
-use Guanguans\DcatLoginCaptcha\Http\Controllers\CaptchaController;
-use Guanguans\DcatLoginCaptcha\Http\Middleware\CleanObContents;
-use Guanguans\DcatLoginCaptcha\Http\Middleware\SetResponseContentType;
-use Guanguans\DcatLoginCaptcha\LoginCaptchaServiceProvider;
+use Bilwy\DcatLoginCaptcha\Http\Controllers\CaptchaController;
+use Bilwy\DcatLoginCaptcha\Http\Middleware\CleanObContents;
+use Bilwy\DcatLoginCaptcha\Http\Middleware\SetResponseContentType;
+use Bilwy\DcatLoginCaptcha\LoginCaptchaServiceProvider;
 use Illuminate\Support\Facades\Route;
 
 Route::get(LoginCaptchaServiceProvider::setting('route.uri'), CaptchaController::class)

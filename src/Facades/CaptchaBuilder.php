@@ -2,15 +2,8 @@
 
 declare(strict_types=1);
 
-/**
- * This file is part of the guanguans/dcat-login-captcha.
- *
- * (c) guanguans <ityaozm@gmail.com>
- *
- * This source file is subject to the MIT license that is bundled.
- */
 
-namespace Guanguans\DcatLoginCaptcha\Facades;
+namespace Bilwy\DcatLoginCaptcha\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -53,6 +46,6 @@ class CaptchaBuilder extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Guanguans\DcatLoginCaptcha\CaptchaBuilder::class;
+        return \Bilwy\DcatLoginCaptcha\CaptchaBuilder::class;
     }
 }

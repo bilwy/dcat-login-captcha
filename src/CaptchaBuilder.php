@@ -10,7 +10,7 @@ declare(strict_types=1);
  * This source file is subject to the MIT license that is bundled.
  */
 
-namespace Guanguans\DcatLoginCaptcha;
+namespace Bilwy\DcatLoginCaptcha;
 
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Support\Traits\Tappable;
